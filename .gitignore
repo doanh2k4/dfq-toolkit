@@ -1,0 +1,29 @@
+# python files
+.mypy_cache
+__pycache__
+
+# exploratory programming
+explore.ipynb
+
+# pytorch files
+*.pt
+
+# local
+local
+
+# experiment logs and datasets
+*.log
+exp
+runs
+
+ckpt
+ckpt2
+ckpt3
+ckpt4
+Distill
+.vscode
+
+# download weights/datasets
+download
+*.ipynb
+TODO.md
