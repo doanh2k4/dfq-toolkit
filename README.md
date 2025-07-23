@@ -3,7 +3,7 @@
 # Task-Specific Zero-shot Quantization-Aware Training 				for Object Detection
 
 [![License](https://img.shields.io/badge/License-AGPL--3.0-blue?style=flat-square)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red?style=flat-square&logo=arxiv)](TBD)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red?style=flat-square&logo=arxiv)](https://arxiv.org/abs/2507.16782)
 [![Website](https://img.shields.io/badge/Project-Website-brightgreen?style=flat-square&logo=googlechrome)](https://dfq-dojo.github.io/dfq-toolkit-webpage/)
 
 </div>
@@ -61,6 +61,13 @@ If you find a bug or have an enhancement idea, feel free to open an issue or sub
 
 If you find our work helpful, please consider citing:
 
-```bash
-TBD
-```
+```bibtex
+@misc{li2025taskspecificzeroshotquantizationawaretraining,
+      title={Task-Specific Zero-shot Quantization-Aware Training for Object Detection}, 
+      author={Changhao Li and Xinrui Chen and Ji Wang and Kang Zhao and Jianfei Chen},
+      year={2025},
+      eprint={2507.16782},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.16782}, 
+}
