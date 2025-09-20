@@ -23,7 +23,7 @@ class CocoDetection(data.Dataset):
         assert dataset in ["train", "val"], 'dataset must be in ["train", "val"]'
         anno_file = f"instances_{dataset}{years}.json"
         assert os.path.exists(root), "file '{}' does not exist.".format(root)
-        self.img_root = os.path.join(root, "images", f"{dataset}{years}")
+        self.img_root = os.path.join(root, f"{dataset}{years}")
         assert os.path.exists(self.img_root), "path '{}' does not exist.".format(
             self.img_root
         )
