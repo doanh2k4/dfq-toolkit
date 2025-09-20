@@ -23,8 +23,9 @@ def create_model(num_classes, load_pretrain_weights=True, mode="exact", num_bits
     #                                  trainable_layers=3)
     # resnet50 imagenet weights url: https://download.pytorch.org/models/resnet50-0676ba61.pth
     backbone = resnet50_fpn_backbone(
-        pretrain_path="resnet50.pth", trainable_layers=3, mode=mode, num_bits=num_bits
-    )
+    pretrain_path="resnet50.pth",
+    trainable_layers=3
+)
 
     model = MaskRCNN(backbone, num_classes=num_classes, mode="exact", num_bits=num_bits)
 
