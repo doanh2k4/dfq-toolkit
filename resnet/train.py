@@ -27,7 +27,7 @@ def create_model(num_classes, load_pretrain_weights=True, mode="exact", num_bits
     trainable_layers=3
 )
 
-    model = MaskRCNN(backbone, num_classes=num_classes, mode="exact", num_bits=num_bits)
+    model = MaskRCNN(backbone, num_classes=num_classes)
 
     if load_pretrain_weights:
         # coco weights url: "https://download.pytorch.org/models/maskrcnn_resnet50_fpn_coco-bf2d0c1e.pth"
