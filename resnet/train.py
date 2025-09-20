@@ -31,9 +31,7 @@ def create_model(num_classes, load_pretrain_weights=True, mode="exact", num_bits
 
     if load_pretrain_weights:
         # coco weights url: "https://download.pytorch.org/models/maskrcnn_resnet50_fpn_coco-bf2d0c1e.pth"
-        weights_dict = torch.load("./mask_rcnn_weights.pth", map_location="cpu")[
-            "model"
-        ]
+        weights_dict = torch.load("./mask_rcnn_weights.pth", map_location="cpu")
         # for k in list(weights_dict.keys()):
         #     if ("box_predictor" in k) or ("mask_fcn_logits" in k):
         #         del weights_dict[k]
@@ -52,7 +50,13 @@ def main(args):
         args.check_ptq,
         args.num_bits,
     )
-    device = torch.device(args.device if torch.cuda.is_available() else "cpu")
+
+    if torch.cuda.is_available():
+        device = torch.device("cuda:0")   # ép dùng GPU 0
+        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+    else:
+        device = torch.device("cpu")
+        print("CUDA not available, using CPU.")
     print("Using {} device training.".format(device.type))
 
     # 用来保存coco_info的文件
